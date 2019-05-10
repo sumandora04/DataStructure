@@ -81,6 +81,89 @@ public class LinkedList {
         return currentNode.data;
     }
 
+    /*
+    * For ADD_LAST:
+    * */
+    public void addLast(int data){
+        //Create a new node to add at the back of the list;
+        Node newNode = new Node(data);
+
+        //Check if the head is null; i.e: List is empty.
+        if (head==null){
+            head=newNode; // Add the 1st item to the list
+            return;
+        }
+
+        //If the list is not empty:
+        // Take a current node, initialised to head.
+        Node currentNode = head;
+        // Walk through the LL untill currentNode.next = null
+        while (currentNode.next!=null){
+            currentNode = currentNode.next; // next node
+        }
+        //Point the tail's pointer to the newNode.
+        currentNode.next = newNode;
+    }
+
+
+    /*
+    *  GET SIZE OF LIST:
+    * */
+
+    public int getListSize(){
+        // if head is null, list is empty
+        if (head==null){
+            return 0;
+        }
+
+        // If list is not empty, traverse through the list and increase the counter untill it reaches the tail or null.
+        Node current = head;
+        int count = 1;
+        while (current.next!=null){
+            current = current.next; // next node
+            count++;
+        }
+
+        return count;
+    }
+
+
+    /*
+    *  Clear Linked list:
+    * */
+    public void clearList(){
+        head=null;
+    }
+
+    /*
+    *  DELETE WITH VALUE:
+    * */
+    public void deleteValue(int data){
+        //If data to be deleted is at node:
+        if (head==null){
+            return;
+        }
+
+        if (head.data==data){
+            head = head.next;
+            return;
+        }
+
+        // If the data is found at the middle of the list:
+        Node current = head;
+        while (current.next!=null){
+            //checking if the current node is previous to the node to be deleted
+            if (current.next.data==data){
+                //Point the current node to the next node of the node to be deleted.
+                current.next = current.next.next;
+                return;
+            }
+            // next node update for while.
+            current = current.next;
+        }
+    }
+
+
     @Override
     public String toString() {
         return "LinkedList{" +
