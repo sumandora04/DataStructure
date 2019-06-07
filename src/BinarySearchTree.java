@@ -214,7 +214,7 @@ public class BinarySearchTree {
     public static void main(String[] args) {
         BinarySearchTree bst = new BinarySearchTree();
 
-       /* bst.insert(6,"Suman");
+        bst.insert(6,"Suman");
         bst.insert(2,"Pooja");
         bst.insert(11,"Manish");
         bst.insert(1,"Divya");
@@ -244,9 +244,9 @@ public class BinarySearchTree {
         bst.printPreOrder();
         bst.delete(6);
         System.out.println("Pre-order after delete: 6");
-        bst.printPreOrder();*/
+        bst.printPreOrder();
 
-        bst.insert(5, "e");
+       /* bst.insert(5, "e");
         bst.insert(3, "c");
         bst.insert(2, "b");
         bst.insert(4, "d");
@@ -259,6 +259,6 @@ public class BinarySearchTree {
         System.out.println("In-order");
         bst.printInOrder();
         System.out.println("Post-order");
-        bst.printPostOrder();
+        bst.printPostOrder();*/
     }
 }
