@@ -10,13 +10,13 @@ public class LinkedList {
             this.data = data;
         }
 
-        @Override
+        /*@Override
         public String toString() {
             return "Node{" +
                     "data=" + data +
                     ", next=" + next +
                     '}';
-        }
+        }*/
     }
 
     /*
@@ -164,10 +164,10 @@ public class LinkedList {
     }
 
 
-    @Override
-    public String toString() {
-        return "LinkedList{" +
-                "head=" + head +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "LinkedList{" +
+//                "head=" + head +
+//                '}';
+//    }
 }
