@@ -8,6 +8,7 @@ public class FibonacciSeriesMemoized {
             return 1;
         }else if (memo[num]==0){
             memo[num] = memoFib(num-1)+memoFib(num-2);
+            System.out.print(memo[num]+"\t");
         }
 
         return memo[num];
@@ -15,7 +16,7 @@ public class FibonacciSeriesMemoized {
 
     public static void main(String[] args) {
         FibonacciSeriesMemoized fibMemo = new FibonacciSeriesMemoized();
-        System.out.println(fibMemo.memoFib(200)); // Less computation time
+        System.out.println(fibMemo.memoFib(50)); // Less computation time
 
     }
 }
