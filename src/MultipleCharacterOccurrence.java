@@ -1,6 +1,21 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 
 public class MultipleCharacterOccurrence {
+
+    private static void removeAllDuplicate(String string){
+        ArrayList<String> stringArray = new ArrayList<>();
+        for (int i = 0; i < string.length(); i++) {
+            stringArray.add(String.valueOf(string.charAt(i)));
+        }
+
+        Object[] objArr = stringArray.toArray();
+        String[] strArr = Arrays.copyOf(objArr,objArr.length,String[].class);
+        System.out.println(Arrays.toString(strArr));
+        HashSet<String> hashSet = new HashSet<>(stringArray);
+        System.out.println(hashSet);
+    }
 
     private void removeDuplicate(String str) {
         ArrayList<String> list = new ArrayList<>();
@@ -32,6 +47,9 @@ public class MultipleCharacterOccurrence {
 
     public static void main(String[] args) {
         MultipleCharacterOccurrence multipleCharacterOccurrence = new MultipleCharacterOccurrence();
-        multipleCharacterOccurrence.removeDuplicate("AABCDABCCDABD");
+      //  multipleCharacterOccurrence.removeDuplicate("AABCDABCCDABD");
+
+        removeAllDuplicate("AABCDABCCDABD");
+
     }
 }
